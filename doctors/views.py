@@ -20,5 +20,4 @@ class DoctorViewSet(viewsets.ModelViewSet):
     queryset = Doctor.objects.all().order_by("-created_at")
     serializer_class = DoctorSerializer
 
-    # Only authenticated users can access these APIs
     permission_classes = [IsAuthenticated]

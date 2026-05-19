@@ -73,15 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'healthcare.wsgi.application'
 
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-
+# postgres db
 DATABASES = {
     "default": dj_database_url.parse(
         os.getenv("DATABASE_URL"),

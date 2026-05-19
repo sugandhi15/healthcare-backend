@@ -3,9 +3,6 @@ from .models import PatientDoctorMapping
 
 
 class PatientDoctorMappingSerializer(serializers.ModelSerializer):
-    """
-    Serializer for mapping patients to doctors.
-    """
 
     class Meta:
         model = PatientDoctorMapping

@@ -3,11 +3,6 @@ from .models import Doctor
 
 
 class DoctorSerializer(serializers.ModelSerializer):
-    """
-    Serializer for Doctor model.
-    Converts Doctor objects to JSON and validates incoming data.
-    """
-
     class Meta:
         model = Doctor
         fields = [

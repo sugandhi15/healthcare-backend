@@ -4,11 +4,8 @@ from doctors.models import Doctor
 
 
 class PatientDoctorMapping(models.Model):
-    """
-    Represents an assignment of a doctor to a patient.
-    One patient can have multiple doctors.
-    One doctor can be assigned to multiple patients.
-    """
+    # One patient can have multiple doctors.
+    # One doctor can be assigned to multiple patients.
 
     patient = models.ForeignKey(
         Patient,
@@ -25,7 +22,6 @@ class PatientDoctorMapping(models.Model):
     assigned_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        # Prevent duplicate assignments of the same doctor to the same patient
         unique_together = ("patient", "doctor")
 
     def __str__(self):

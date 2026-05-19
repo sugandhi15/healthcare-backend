@@ -5,10 +5,6 @@ from .serializers import PatientDoctorMappingSerializer
 
 
 class PatientDoctorMappingViewSet(viewsets.ModelViewSet):
-    """
-    CRUD APIs for patient-doctor assignments.
-    """
-
     serializer_class = PatientDoctorMappingSerializer
     permission_classes = [IsAuthenticated]
 
