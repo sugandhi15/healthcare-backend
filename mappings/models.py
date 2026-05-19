@@ -2,7 +2,7 @@ from django.db import models
 from patients.models import Patient
 from doctors.models import Doctor
 
-
+# mappings btw patients and doctors
 class PatientDoctorMapping(models.Model):
     # One patient can have multiple doctors.
     # One doctor can be assigned to multiple patients.

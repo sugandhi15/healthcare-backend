@@ -3,9 +3,9 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    # user model
 
     name = models.CharField(max_length=255)
+    
     email = models.EmailField(unique=True)
 
     def __str__(self):

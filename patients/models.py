@@ -3,6 +3,7 @@ from django.conf import settings
 
 
 class Patient(models.Model):
+    # patients model
     
     created_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,

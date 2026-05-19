@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Doctor(models.Model):
+
     name = models.CharField(max_length=255)
 
     specialization = models.CharField(max_length=255)
@@ -15,7 +16,4 @@ class Doctor(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        """
-        String representation shown in admin panel.
-        """
         return f"{self.name} - {self.specialization}"
